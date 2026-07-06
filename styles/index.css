@@ -1,0 +1,266 @@
+/* 1. VARIABLES, RESET & BASE STYLES */
+:root {
+    --primary-color: #222222;       /* Dark wireframe headers / nav */
+    --accent-color: #555555;        /* Active / Hover item states */
+    --bg-light: #e0e0e0;            /* Card body background */
+    --bg-body: #f9f9f9;             /* Document background */
+    --text-color: #333333;
+    --text-light: #ffffff;
+    --border-color: #cccccc;
+    
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --padding-standard: 1rem;
+    --gap-standard: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-body);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Fluid responsive image configurations */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* 2. HEADER & LOGO */
+header {
+    background-color: var(--text-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding-standard);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* Constrain the logo image safely */
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.logo span {
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: -0.5px;
+}
+
+/* Hamburger Trigger styling */
+#menu-toggle {
+    font-size: 1.75rem;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    transition: color 0.2s ease;
+}
+
+#menu-toggle:hover {
+    color: var(--accent-color);
+}
+
+/*3. MOBILE-FIRST NAVIGATION*/
+#menu {
+    background-color: var(--primary-color);
+}
+
+#menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+/* When the .hidden class is active, hide on small screens */
+#menu.hidden {
+    display: none;
+}
+
+#menu ul li a {
+    display: block;
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 0.85rem var(--padding-standard);
+    text-align: center;
+    font-weight: 500;
+    /* Invisible base border prevents layout jitter/twitching on hover */
+    border-bottom: 3px solid transparent; 
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+#menu ul li a:hover {
+    background-color: var(--accent-color);
+    border-bottom: 3px solid var(--text-light);
+}
+
+/* 4. MAIN LAYOUT BLOCK (Mobile Stacking Setup)*/
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--padding-standard);
+}
+
+main h1 {
+    font-size: 2rem;
+    margin-bottom: var(--gap-standard);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.3rem;
+}
+
+/* Common Section Structural styling */
+main section {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    margin-bottom: var(--gap-standard);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+main section h2 {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+main section p {
+    padding: var(--padding-standard);
+    font-size: 0.95rem;
+}
+
+/* Specific Section adjustments */
+#profile-photo {
+    text-align: center;
+}
+
+#profile-photo img {
+    margin: var(--padding-standard) auto;
+    display: block;
+    border-radius: 4px;
+    width: 200px;
+    height: 200px;
+}
+
+/* Web Certificate Courses Pills Setup */
+#web-certificate-courses ul {
+    list-style: none;
+    padding: var(--padding-standard);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+#web-certificate-courses ul li {
+    background-color: #b5b5b5;
+    color: var(--primary-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1px solid #999999;
+    flex: 1 1 calc(33.333% - 0.5rem); /* Pill style sizing */
+    text-align: center;
+    min-width: 80px;
+}
+
+/*5. FOOTER STRUCTURE*/
+footer {
+    background-color: var(--bg-light);
+    border-top: 1px solid var(--border-color);
+    padding: 1.5rem var(--padding-standard);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.footer-socials a img {
+    transition: transform 0.2s ease;
+}
+
+.footer-socials a img:hover {
+    transform: scale(1.2);
+}
+
+.footer-info p, 
+.footer-modified p {
+    margin: 0;
+    color: #444444;
+}
+
+/* 6. RESPONSIVE TABLET & DESKTOP VIEWS (Breakpoints)*/
+@media (min-width: 768px) {
+    /* Hide responsive mobile toggle interface */
+    #menu-toggle {
+        display: none;
+    }
+
+    /* Transform navigation block to Flex layout row */
+    #menu {
+        display: block !important; /* Forces layout tracking above hidden states */
+    }
+
+    #menu ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-left: var(--padding-standard);
+    }
+
+    #menu ul li a {
+        padding: 1rem 1.5rem;
+    }
+
+    /* Convert Mobile Stack into 2-Column Grid Wireframe */
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: var(--gap-standard);
+    }
+
+    main h1 {
+        grid-column: 1 / -1; /* Spans full horizontal layout top */
+    }
+
+    #course-work {
+        grid-column: 1 / 2;
+        grid-row: 2;
+    }
+
+    #profile-photo {
+        grid-column: 2 / 3;
+        grid-row: 2;
+    }
+
+    #web-certificate-courses {
+        grid-column: 1 / -1; /* Full row layout block beneath column items */
+    }
+}
