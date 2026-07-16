@@ -1,0 +1,88 @@
+/* General Page Styling */
+body {
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    background-color: #1b365d; /* Dark Deep Blue */
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+}
+
+footer {
+    margin-top: auto;
+    font-size: 0.9rem;
+    border-top: 4px solid #d99b00; /* Warm Gold accent */
+}
+
+/* Main Area and Responsive Grid Layout */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* Individual Card Styling */
+.prophet-card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.prophet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.prophet-card h2 {
+    font-size: 1.35rem;
+    color: #1b365d;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+    width: 100%;
+}
+
+.prophet-card p {
+    font-size: 0.9rem;
+    margin: 0.25rem 0;
+    color: #555;
+}
+
+.prophet-card img {
+    margin-top: 1rem;
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #eaeaea; /* Fallback skeleton indicator during lazy load */
+}

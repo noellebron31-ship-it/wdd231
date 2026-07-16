@@ -1,0 +1,21 @@
+@media (min-width: 37.5rem) {
+  #menu-btn {
+    display: none;
+  }
+
+  nav ul {
+    display: flex; 
+    justify-content: center;
+  }
+
+  nav li a {
+    border-bottom: none;
+  }
+
+ 
+  #members-container.list-view section {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

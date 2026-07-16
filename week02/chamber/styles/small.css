@@ -1,0 +1,123 @@
+/* Custom properties for color schemes */
+:root {
+  --primary-color: #0d3b66;
+  --secondary-color: #f4d35e;
+  --text-dark: #333333;
+  --bg-light: #fafafa;
+  --card-border: #dddddd;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  margin: 0;
+}
+
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+#menu-btn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #1a5286;
+  display: none; 
+}
+
+nav ul.open {
+  display: block;
+}
+
+nav li a {
+  display: block;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid #14436d;
+}
+
+
+.view-toggle {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.view-toggle button {
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
+  cursor: pointer;
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+
+.view-toggle button.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+
+#members-container.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+#members-container.grid-view section {
+  background: white;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#members-container.grid-view img {
+  max-height: 80px;
+  width: auto;
+  margin-bottom: 1rem;
+}
+
+
+#members-container.list-view {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+#members-container.list-view section {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--card-border);
+  background: none;
+}
+
+#members-container.list-view img {
+  display: none; 
+}
+
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}

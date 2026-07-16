@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Summit Tech Solutions",
+    "address": "123 Alpine Way, Suite A",
+    "phone": "(555) 019-2834",
+    "website": "https://www.summittech.example.com",
+    "image": "images/summit-logo.jpg",
+    "membershipLevel": 3,
+    "tagline": "Scaling your business to new heights."
+  },
+  {
+    "name": "The Daily Grind Cafe",
+    "address": "456 Main Street",
+    "phone": "(555) 014-9876",
+    "website": "https://www.dailygrind.example.com",
+    "image": "images/dailygrind-logo.jpg",
+    "membershipLevel": 1,
+    "tagline": "Freshly brewed community daily."
+  },
+  {
+    "name": "Apex Marketing Group",
+    "address": "789 Pine Blvd, Floor 3",
+    "phone": "(555) 017-3451",
+    "website": "https://www.apexmarketing.example.com",
+    "image": "images/apex-logo.png",
+    "membershipLevel": 2,
+    "tagline": "Reach your peak audience."
+  }
+]
