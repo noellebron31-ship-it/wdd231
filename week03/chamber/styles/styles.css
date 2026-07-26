@@ -1,0 +1,298 @@
+/* 1. VARIABLES & BASE SETUP */
+:root {
+    --primary-color: #222222;
+    --accent-color: #0056b3;
+    --cta-color: #d9534f;
+    --bg-light: #f4f4f4;
+    --bg-card: #ffffff;
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --border-color: #dddddd;
+    --font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --padding-std: 1rem;
+    --gap-std: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 2. HEADER & NAVIGATION */
+header {
+    background-color: var(--bg-card);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding-std);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo span {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+#menu-toggle {
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+#menu {
+    background-color: var(--primary-color);
+}
+
+#menu.hidden {
+    display: none;
+}
+
+#menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#menu ul li a {
+    display: block;
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 0.85rem var(--padding-std);
+    text-align: center;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+#menu ul li a:hover,
+#menu ul li a.active {
+    background-color: var(--accent-color);
+}
+
+/* 3. MAIN LAYOUT (Mobile First) */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--padding-std);
+}
+
+main h1 {
+    font-size: 1.8rem;
+    margin-bottom: var(--gap-std);
+    color: var(--primary-color);
+}
+
+/* Generic Section Card Container */
+main section {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    margin-bottom: var(--gap-std);
+    overflow: hidden;
+    padding: var(--padding-std);
+}
+
+main section h2 {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    margin: calc(var(--padding-std) * -1) calc(var(--padding-std) * -1) var(--padding-std);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* HERO SECTION & CTA */
+.hero-card {
+    position: relative;
+    padding: 0;
+}
+
+.hero-card picture img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.cta-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.65);
+    color: var(--text-light);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 85%;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: var(--cta-color);
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #c9302c;
+}
+
+/* EVENTS & WEATHER */
+.event-item {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.event-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.weather-info-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.forecast-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.forecast-day {
+    background: var(--bg-light);
+    padding: 0.5rem;
+    border-radius: 4px;
+    text-align: center;
+    flex: 1;
+}
+
+/* SPOTLIGHTS */
+#spotlights-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-std);
+}
+
+.spotlight-card {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 1rem;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.spotlight-card img {
+    margin: 0 auto 0.5rem auto;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+.membership-badge {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.badge-gold { background-color: #ffd700; color: #000; }
+.badge-silver { background-color: #c0c0c0; color: #000; }
+
+/* 4. FOOTER */
+footer {
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--border-color);
+    padding: 1.5rem var(--padding-std);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* 5. RESPONSIVE DESKTOP LAYOUT (Grid) */
+@media (min-width: 768px) {
+    #menu-toggle {
+        display: none;
+    }
+
+    #menu {
+        display: block !important;
+    }
+
+    #menu ul {
+        flex-direction: row;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Multi-column grid layout for desktop */
+    main.home-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: var(--gap-std);
+    }
+
+    main.home-grid h1 {
+        grid-column: 1 / -1;
+    }
+
+    .hero-card {
+        grid-column: 1 / -1;
+    }
+
+    .events-card {
+        grid-column: 1 / 2;
+    }
+
+    .weather-card {
+        grid-column: 2 / 3;
+    }
+
+    .spotlights-container {
+        grid-column: 1 / -1;
+    }
+
+    #spotlights-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}

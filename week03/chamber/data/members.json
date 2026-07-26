@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Alpha Tech Solutions",
+    "image": "images/logo.svg",
+    "phone": "(809) 555-0101",
+    "address": "123 Innovation Way, Suite 100",
+    "website": "https://example.com",
+    "membershipLevel": "Gold"
+  },
+  {
+    "name": "Beacon Media Group",
+    "image": "images/logo.svg",
+    "phone": "(809) 555-0102",
+    "address": "456 Market Street",
+    "website": "https://example.com",
+    "membershipLevel": "Silver"
+  },
+  {
+    "name": "Caribbean Fresh Market",
+    "image": "images/logo.svg",
+    "phone": "(809) 555-0103",
+    "address": "789 Commerce Blvd",
+    "website": "https://example.com",
+    "membershipLevel": "Bronze"
+  },
+  {
+    "name": "Delta Financial Partners",
+    "image": "images/logo.svg",
+    "phone": "(809) 555-0104",
+    "address": "101 Financial Plaza",
+    "website": "https://example.com",
+    "membershipLevel": "Gold"
+  },
+  {
+    "name": "Echo Creative Agency",
+    "image": "images/logo.svg",
+    "phone": "(809) 555-0105",
+    "address": "202 Design District",
+    "website": "https://example.com",
+    "membershipLevel": "Silver"
+  }
+]
