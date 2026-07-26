@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Enrollment Modules</title>
+  <link rel="stylesheet" href="styles/modules.css">
+  <script type="module" src="scripts/modules.mjs"></script>
+</head>
+<body>
+  <main class="container">
+    <header class="course-header">
+      <h1 id="courseName">Course Name Loading...</h1>
+      <h2 id="courseCode">Course Code</h2>
+    </header>
+
+    <section class="controls-card">
+      <h3>Manage Enrollment</h3>
+      <div class="control-group">
+        <label for="sectionNumber">Select Section:</label>
+        <select id="sectionNumber">
+          <option value="">Loading sections...</option>
+        </select>
+      </div>
+      
+      <div class="button-group">
+        <button id="enrollStudent" class="btn btn-enroll">Enroll Student</button>
+        <button id="dropStudent" class="btn btn-drop">Drop Student</button>
+      </div>
+    </section>
+
+    <section class="table-container">
+      <h3>Section Details</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Section</th>
+            <th>Room</th>
+            <th>Enrolled</th>
+            <th>Days</th>
+            <th>Instructor</th>
+          </tr>
+        </thead>
+        <tbody id="sections"></tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>
